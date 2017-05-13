@@ -2,25 +2,30 @@
 <items version="2" >
 
     <item
+        is-multidex="true"
         jar="/Users/bertrandleclercq/AndroidStudioProjects/LTMListView3/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
-        revision="21.1.2"
-        sha1="145a80bd02ce87baf6e56cb54085161a5d213f41">
-        <dex dex="/Users/bertrandleclercq/AndroidStudioProjects/LTMListView3/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_574525ee2d202d437f8babba794dcb8f85fe7799/classes.dex" />
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/Users/bertrandleclercq/AndroidStudioProjects/LTMListView3/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_574525ee2d202d437f8babba794dcb8f85fe7799/classes.dex" />
     </item>
     <item
         jar="/Users/bertrandleclercq/Documents/android-sdk-macosx/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
-        jumboMode="true"
+        jumboMode="false"
+        optimize="true"
         revision="21.1.2"
         sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="/Users/bertrandleclercq/AndroidStudioProjects/LTMListView3/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-19.1.0_e10a43d0fae5642a0f4eb134da29482f5eed1e62/classes.dex" />
+        <dex dex="/Users/bertrandleclercq/AndroidStudioProjects/LTMListView3/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0_e10a43d0fae5642a0f4eb134da29482f5eed1e62.jar" />
     </item>
     <item
+        is-multidex="true"
         jar="/Users/bertrandleclercq/AndroidStudioProjects/LTMListView3/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
-        revision="21.1.2"
-        sha1="726e027141d6f3edbbd31494b649ae6b9cb3f4dc">
-        <dex dex="/Users/bertrandleclercq/AndroidStudioProjects/LTMListView3/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_81827eec909a3538ecbfb8a9953da31105e73874/classes.dex" />
+        optimize="true"
+        revision="25.0.0"
+        sha1="6d30dfaf7d301943c3315ae3f7732a647ddd8f20">
+        <dex dex="/Users/bertrandleclercq/AndroidStudioProjects/LTMListView3/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_81827eec909a3538ecbfb8a9953da31105e73874/classes.dex" />
     </item>
 
 </items>

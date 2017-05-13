@@ -1,18 +1,15 @@
 package com.ltm.ltmlistview3;
 
-import android.os.Bundle;
-import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Context;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity extends ListActivity {
@@ -72,7 +69,7 @@ public class MainActivity extends ListActivity {
 			Log.v("ltm", "position = " + position + ", convertView = " + convertView);
 			
 			// 1. Déplie mon Layout qui réprésente une ligne
-			View rowView;
+			View rowView = null;
 			
 			//if(convertView==null){
 				LayoutInflater inflater = (LayoutInflater)_context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
