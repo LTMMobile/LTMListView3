@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -20,6 +21,14 @@ public class MainActivity extends ListActivity {
 
 		// fixe l'adaptateur
 		setListAdapter(new MonAdaptateur(this));
+
+		// click
+		getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+			}
+		});
 
 	}
 
@@ -47,12 +56,6 @@ public class MainActivity extends ListActivity {
 		};
 
 		@Override
-		public int getCount() {
-			Log.v("ltm", "getCount = " + _tab_images.length);
-			return _tab_images.length;
-		}
-
-		@Override
 		public Object getItem(int position) {
 			Log.v("ltm", "getItem("+position+")= "+_tab_images[position]);
 			return _tab_images[position];
@@ -64,6 +67,12 @@ public class MainActivity extends ListActivity {
 		}
 
 		@Override
+		public int getCount() {
+			Log.v("ltm", "getCount = " + _tab_images.length);
+			return _tab_images.length;
+		}
+
+		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			
 			Log.v("ltm", "position = " + position + ", convertView = " + convertView);
@@ -71,23 +80,25 @@ public class MainActivity extends ListActivity {
 			// 1. Déplie mon Layout qui réprésente une ligne
 			View rowView = null;
 			
-			//if(convertView==null){
-				LayoutInflater inflater = (LayoutInflater)_context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			if(convertView==null) {
+				LayoutInflater inflater = (LayoutInflater) _context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 				rowView = inflater.inflate(R.layout.row_layout, parent, false);
-				// 2. Editer les widgets
-				TextView textView = (TextView)rowView.findViewById( R.id.textView1);
-				ImageView imageView = (ImageView)rowView.findViewById(R.id.imageView1);
-				imageView.setImageResource(_tab_images[position]);
-				textView.setText(values[position]);
+			}else {
+				rowView = convertView;
+			}
+
+			// 2. MAJ widgets
+			TextView textView = rowView.findViewById( R.id.textView1);
+			ImageView imageView = rowView.findViewById(R.id.imageView1);
+			imageView.setImageResource(_tab_images[position]);
+			textView.setText(values[position]);
 
 			Log.v("ltm", "position = " + position);
-			//}else
-				//rowView = (View)convertView;
-			
+
 			return rowView;
 		}
 
-		public MonAdaptateur(Context context) {//, String [] v) {
+		public MonAdaptateur(Context context) {
 			_context = context;
 		}
 		
