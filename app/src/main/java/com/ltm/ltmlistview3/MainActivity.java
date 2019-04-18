@@ -26,7 +26,7 @@ public class MainActivity extends ListActivity {
 		getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+				//
 			}
 		});
 
@@ -75,12 +75,12 @@ public class MainActivity extends ListActivity {
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			
-			Log.v("ltm", "position = " + position + ", convertView = " + convertView);
+			Log.d("ltm", "position = " + position + ", convertView = " + convertView);
 			
 			// 1. Déplie mon Layout qui réprésente une ligne
 			View rowView = null;
 			
-			if(convertView==null) {
+			if(convertView==null) { // optimisation
 				LayoutInflater inflater = (LayoutInflater) _context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 				rowView = inflater.inflate(R.layout.row_layout, parent, false);
 			}else {
@@ -93,7 +93,7 @@ public class MainActivity extends ListActivity {
 			imageView.setImageResource(_tab_images[position]);
 			textView.setText(values[position]);
 
-			Log.v("ltm", "position = " + position);
+			Log.d("ltm", "position = " + position);
 
 			return rowView;
 		}
