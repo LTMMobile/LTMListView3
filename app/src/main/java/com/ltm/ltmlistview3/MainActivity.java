@@ -32,6 +32,12 @@ public class MainActivity extends ListActivity {
 
 	}
 
+
+
+
+
+
+
 	class MonAdaptateur extends BaseAdapter {
 		
 		public MonAdaptateur(Context context, int resource) {
@@ -48,7 +54,8 @@ public class MainActivity extends ListActivity {
 				R.drawable.album_photo,
 				R.drawable.connection_network,
 				R.drawable.files,
-				R.drawable.carnet_contact};
+				R.drawable.carnet_contact
+		};
 
 		String [] values = new String[] { "Device", "Géo localisation",
 				"Accéléromètre", "Internet",  "Dialogues", "Album photos",
