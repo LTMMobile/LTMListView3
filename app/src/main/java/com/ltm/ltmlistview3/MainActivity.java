@@ -32,17 +32,11 @@ public class MainActivity extends ListActivity {
 
 	}
 
-
-
-
-
-
-
+	// Classe inner java (adaptateur)
 	class MonAdaptateur extends BaseAdapter {
 		
 		public MonAdaptateur(Context context, int resource) {
 			super();//, resource);
-			// TODO Auto-generated constructor stub
 		}
 
 		private Integer [] _tab_images = {
