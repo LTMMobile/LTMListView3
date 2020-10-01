@@ -22,7 +22,7 @@ public class MainActivity extends ListActivity {
 		// fixe l'adaptateur
 		setListAdapter(new MonAdaptateur(this));
 
-		// click
+		// click dans la liste
 		getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -77,7 +77,9 @@ public class MainActivity extends ListActivity {
 		public View getView(int position, View convertView, ViewGroup parent) {
 			
 			Log.d("ltm", "position = " + position + ", convertView = " + convertView);
-			
+
+
+
 			// 1. Déplie mon Layout qui réprésente une ligne
 			View rowView = null;
 			
@@ -90,8 +92,10 @@ public class MainActivity extends ListActivity {
 
 			// 2. MAJ widgets
 			TextView textView = rowView.findViewById( R.id.textView1);
+
 			ImageView imageView = rowView.findViewById(R.id.imageView1);
 			imageView.setImageResource(_tab_images[position]);
+
 			textView.setText(values[position]);
 
 			Log.d("ltm", "position = " + position);
