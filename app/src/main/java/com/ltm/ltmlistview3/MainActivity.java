@@ -26,20 +26,18 @@ public class MainActivity extends ListActivity {
 		getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				//
 			}
 		});
-
 	}
 
 	// Classe inner java (adaptateur)
-	class MonAdaptateur extends BaseAdapter {
+	static class MonAdaptateur extends BaseAdapter {
 		
-		public MonAdaptateur(Context context, int resource) {
+		/*public MonAdaptateur(Context context, int resource) {
 			super();//, resource);
-		}
+		}*/
 
-		private Integer [] _tab_images = {
+		private final Integer [] _tab_images = {
 				R.drawable.device,
 				R.drawable.geolocation,
 				R.drawable.accelerometer,
@@ -78,8 +76,6 @@ public class MainActivity extends ListActivity {
 			
 			Log.d("ltm", "position = " + position + ", convertView = " + convertView);
 
-
-
 			// 1. Déplie mon Layout qui réprésente une ligne
 			View rowView = null;
 			
@@ -107,7 +103,7 @@ public class MainActivity extends ListActivity {
 			_context = context;
 		}
 		
-		private Context _context;
+		private final Context _context;
 	}
 
 	@Override
