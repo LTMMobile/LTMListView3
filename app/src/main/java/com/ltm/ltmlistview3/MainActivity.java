@@ -14,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends ListActivity {
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -30,12 +29,13 @@ public class MainActivity extends ListActivity {
 		});
 	}
 
+
+
+
+
+
 	// Classe inner java (adaptateur)
 	static class MonAdaptateur extends BaseAdapter {
-		
-		/*public MonAdaptateur(Context context, int resource) {
-			super();//, resource);
-		}*/
 
 		private final Integer [] _tab_images = {
 				R.drawable.device,
@@ -73,14 +73,13 @@ public class MainActivity extends ListActivity {
 
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
-			
 			Log.d("ltm", "position = " + position + ", convertView = " + convertView);
 
 			// 1. Déplie mon Layout qui réprésente une ligne
 			View rowView = null;
 			
 			if(convertView==null) { // optimisation
-				LayoutInflater inflater = (LayoutInflater) _context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+				LayoutInflater inflater = (LayoutInflater)_context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 				rowView = inflater.inflate(R.layout.row_layout, parent, false);
 			}else {
 				rowView = convertView;
